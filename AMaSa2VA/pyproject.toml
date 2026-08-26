@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amasa2va"
+version = "0.1.0"
+description = "Inference-time memory for Sa2VA video segmentation and video question answering"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.23",
+  "torch>=2.0",
+]
+
+[project.optional-dependencies]
+train = ["transformers==4.48.*"]
+eval = ["opencv-python>=4.8", "pycocotools>=2.0.7"]
+test = ["pytest>=7"]
+qa = [
+  "torchvision>=0.15",
+  "transformers==4.48.*",
+  "pillow>=9",
+  "pandas>=1.5",
+  "openpyxl>=3",
+  "xlsxwriter>=3",
+  "decord>=0.6",
+  "opencv-python>=4.8",
+  "qwen-vl-utils>=0.0.8",
+  "sentencepiece>=0.1.99",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["projects*"]

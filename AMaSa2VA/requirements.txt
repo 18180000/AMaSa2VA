@@ -1,0 +1,23 @@
+# Install the upstream Sa2VA environment first. This file adds the runtime
+# dependencies used by the video evaluation entry point. The upstream
+# sa2va_eval directory
+# itself is supplied through SA2VA_EVAL_ROOT rather than installed from PyPI.
+-r requirements.txt
+torchvision>=0.15
+pillow>=9
+pandas>=1.5
+openpyxl>=3
+xlsxwriter>=3
+decord>=0.6
+moviepy==1.0.3
+opencv-python>=4.8
+qwen-vl-utils>=0.0.8
+sentencepiece>=0.1.99
+xtuner==0.1.23
+peft
+mmengine
+datasets
+timm
+einops
+scipy
+scikit-image
